@@ -1,6 +1,6 @@
 FreeRule:
   number_of_items: 2
-  sale_price : 3.11
+  sale_price : 0
   
 ReducedPriceRule:
   number_of_items: 3

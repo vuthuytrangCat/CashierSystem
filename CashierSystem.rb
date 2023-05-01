@@ -69,7 +69,7 @@ class CashierSystem
   def calculate_final_price(name, quantity)
     if Item.sale_price_present?(name)
       
-      return FinalPrice.offer_only(name, quantity) if items_are_within_offer?(name, quantity)
+      #return FinalPrice.offer_only(name, quantity) if items_are_within_offer?(name, quantity)
       return FinalPrice.no_offer(name, quantity) if items_less_than_offer_count?(name, quantity)
 
       return FinalPrice.offer_added(name, quantity)
