@@ -1,29 +1,13 @@
 # frozen_string_literal: true
 
-<<<<<<< HEAD
 require_relative 'item'
 require_relative 'final_price'
 require_relative 'tabulable'
 require_relative 'savings'
-
-
 #require_relative '../spec/item'
 #require_relative '../lib/final_price'
 #require_relative '../lib/tabulable'
 #require_relative '../lib/savings'
-=======
-#require_relative 'item'
-#require_relative 'final_price'
-#require_relative 'tabulable'
-#require_relative 'savings'
-
-
-require_relative '../spec/item'
-require_relative '../lib/final_price'
-require_relative '../lib/tabulable'
-require_relative '../lib/savings'
->>>>>>> ade2d24e457bfcea6a8f0598067c878e23690d6d
-
 #require_relative 'assets/products'
 # :nodoc:
 class CashierSystem_spec
