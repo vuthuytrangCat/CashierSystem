@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-#require_relative 'item'
-require_relative '../spec/item'
+require_relative 'item'
+#require_relative '../spec/item'
 
 # :nodoc:
 class Savings
