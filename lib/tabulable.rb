@@ -19,7 +19,7 @@ module Tabulable
       end
       puts Terminal::Table.new headings: %w[Item Quantity Price], rows: rows
       puts "Total price : £#{money.round(2)}"
-      puts "You saved $#{savings.round(2)} today"
+      puts "You saved £#{savings.round(2)} today"
       #puts "Normal price £#{savings.round(2)} "
     end
   end

@@ -22,15 +22,38 @@ Currently there are only 3 types of configurable discount rules:
   
     £ ruby price_calculator.rb
     Please enter all the items purchased separated by a comma
-    GR1,GR1, GR1,SR1,SR1,SR1,SR1,SR1,CF1,CF1,CF1,CF1,CF1,CF1
+    GR1,GR1, GR1
     
      
     
            Item     Quantity      Price
             --------------------------------------
             GR1      3            £6.22
-            SR1      5            £24.00
-            CF1      6            £58.40
         
-        Total price : £88.62
-        You saved £3.45 today.
+        Total price : £6.22
+        You saved £3.11 today.
+
+    £ ruby price_calculator.rb
+    Please enter all the items purchased separated by a comma
+    SR1,SR1,SR1,SR1,SR1
+    
+     
+    
+           Item     Quantity      Price
+            --------------------------------------
+            SR1      5            £23.35
+        Total price : £24.00
+        You saved £1.65 today.
+
+    £ ruby price_calculator.rb
+    Please enter all the items purchased separated by a comma
+    CF1,CF1,CF1,CF1,CF1,CF1
+    
+     
+    
+           Item     Quantity      Price
+            --------------------------------------
+            CF1      6            £13.48
+        
+        Total price : £13.48
+        You saved £53. today.        

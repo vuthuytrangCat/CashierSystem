@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 #coding: utf-8
 require "yaml"
-# :nodoc:
+
 class ItemPrices
 products_list =  
 YAML.load_file(File.join(File.dirname(__FILE__), '../assets/products.yml'))
@@ -26,19 +26,20 @@ CURRENT_PRICES = {
     'sr1' => {
       'unit_price' => products_list['Strawberries']['unit_price'],
       'selling_price' => {
-        'number_of_items' => rules_list['FractionPriceRule']['number_of_items'],
+        'number_of_items' => rules_list['ReducedPriceRule']['number_of_items'],
         'sale_price' => {},
-        'different_price'=>{},
-        'sale_percent' => rules_list['FractionPriceRule']['sale_percent']
+        'different_price' => rules_list['ReducedPriceRule']['different_price'],
+        'sale_percent' =>{}
       }
     },
     'cf1' => {
       'unit_price' => products_list['Coffee']['unit_price'],
       'selling_price' => {
-        'number_of_items' => rules_list['ReducedPriceRule']['number_of_items'],
+        'number_of_items' => rules_list['FractionPriceRule']['number_of_items'],
         'sale_price' =>{},
-        'different_price' => rules_list['ReducedPriceRule']['different_price'],
-        'sale_percent' =>{}
+        'different_price'=>{},
+        'sale_percent' => rules_list['FractionPriceRule']['sale_percent']
+        
       }
     }
     

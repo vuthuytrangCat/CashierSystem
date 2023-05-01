@@ -13,24 +13,26 @@ class Item
 
     def find_unit_price(item)
       PRICES.dig(item, 'unit_price')
+
     end
 
     def sale_price_present?(item)
       return true unless PRICES.dig(item, 'selling_price').empty?
     end
 
-    def different_price_present?(item)
+    def different_price?(item)
       return true unless PRICES.dig(item, 'selling_price', 'different_price').empty?
     end
 
-    def sale_percent_present?(item)
+    def sale_percent?(item)
       return true unless PRICES.dig(item, 'selling_price', 'sale_percent').empty?
     end
 
+    def sale_price?(item)
+      return true unless PRICES.dig(item, 'selling_price', 'sale_price').empty?
+    end
 
     def find_sale_price(item)
-      #puts PRICES.dig(item, 'selling_price', 'sale_price') 
-      #puts PRICES.dig(item, 'selling_price', 'different_price')
           PRICES.dig(item, 'selling_price', 'sale_price') 
     end
   

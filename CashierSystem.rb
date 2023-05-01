@@ -15,6 +15,7 @@ class CashierSystem
   end
 
   def calculate
+    puts '--------------------------Cashier System---------------------------'
     puts 'Please enter all the items purchased separated by a comma'
     items = gets.chomp.downcase
     items = items.delete(' ').split(',')
@@ -66,18 +67,37 @@ class CashierSystem
     }
   end
 
+=begin
+  
+  
+    if Item.different_price?(name)
+    return FinalPrice.sale_price_added(name, quantity) 
+    elseif Item.sale_percent?(name)
+      return FinalPrice.sale_percent_added(name, quantity) 
+    elseif Item.sale_price?(name)
+      return FinalPrice.offer_added(name, quantity) 
+    else
+      puts 'Error'
+    end
+  end
+    FinalPrice.no_offer(name, quantity)
+  end
+
+=end
+
   def calculate_final_price(name, quantity)
     if Item.sale_price_present?(name)
       
       #return FinalPrice.offer_only(name, quantity) if items_are_within_offer?(name, quantity)
       return FinalPrice.no_offer(name, quantity) if items_less_than_offer_count?(name, quantity)
 
-      return FinalPrice.offer_added(name, quantity)
+      #return FinalPrice.offer_added(name, quantity)
+      return FinalPrice.different_price_added(name, quantity) 
+      #return FinalPrice.sale_percent_added(name, quantity) 
     end
 
     FinalPrice.no_offer(name, quantity)
   end
 end
-
 calculations = CashierSystem.new
 calculations.calculate

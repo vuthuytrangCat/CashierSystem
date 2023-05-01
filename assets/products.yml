@@ -1,8 +1,11 @@
 Green Tea:
   unit_price: 3.11
+  selling_price: 3.11
 
 Strawberries:
   unit_price: 5
+  selling_price : 5
 
 Coffee:
   unit_price: 11.23
+  selling_price : 11.23
